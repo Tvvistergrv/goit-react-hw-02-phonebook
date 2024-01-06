@@ -4,7 +4,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 
-import s from '../App.module.css';
+import css from '../App.module.css';
 
 export class App extends Component {
   constructor() {
@@ -57,15 +57,17 @@ export class App extends Component {
     const { filter } = this.state;
 
     return (
-      <section className={s.content}>
-        <div className={s.content__container}>
-          <ContactForm addContact={this.addContact} />
-          <ContactList
+      <section className={css.content}>
+        <div className={css.content__container}>
+        <h1 className={css.form__title}>Phonebook</h1>
+        <ContactForm addContact={this.addContact} />
+        <h2>Contacts</h2>
+        <ContactList
             contacts={this.filteredContacts()}
             deleteContact={this.deleteContact}
-          >
-            <Filter filter={filter} addFilter={this.addFilter} />
-          </ContactList>
+        >
+        <Filter filter={filter} addFilter={this.addFilter} />
+        </ContactList>
         </div>
       </section>
     );

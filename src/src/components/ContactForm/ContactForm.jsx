@@ -19,7 +19,6 @@ export class ContactForm extends Component {
   render() {
     return (
       <section className={css.form}>
-        <h1 className={css.form__title}>Phonebook</h1>
         <form className={css.form__container} onSubmit={this.handleFormSubmit}>
           <label className={css.form__label}>Name</label>
           <input
