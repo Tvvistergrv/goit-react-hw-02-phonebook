@@ -20,6 +20,8 @@ export class App extends Component {
     };
   }
 
+
+
   addContact = event => {
     const loweredCase = event.name.toLowerCase().trim();
 
@@ -33,7 +35,7 @@ export class App extends Component {
       this.setState(({ contacts }) => ({
         contacts: [...contacts, event],
       }));
-    }
+    } 
   };
 
   addFilter = event => {
